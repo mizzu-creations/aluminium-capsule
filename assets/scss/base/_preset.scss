@@ -1,0 +1,50 @@
+.blind {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overscroll-behavior-y: contain;
+}
+
+html {
+  cursor: default;
+  -webkit-tap-highlight-color: transparent;
+  background: #0a1b37;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "m";
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
