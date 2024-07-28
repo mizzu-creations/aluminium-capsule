@@ -1,0 +1,75 @@
+.sc-intro {
+  height: 300vh;
+  .bg {
+    @include absoluteCenter;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .intro-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    > div:not(.scroll-down) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .capsule-box {
+        // width: 16.50794vh;
+        width: 9.28571vw;
+        img {
+          aspect-ratio: auto 356 / 354;
+          will-change: opacity, transform;
+        }
+      }
+      .title-box {
+        .title {
+          // font-size: 22.22222vh;
+          // line-height: 21.16402vh;
+          font-size: 12.5vw;
+          line-height: 11.90476vw;
+          font-family: "e";
+          font-weight: 300;
+          perspective: 250px;
+        }
+      }
+    }
+    .scroll-down {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      bottom: 64px;
+      width: 100%;
+      .text-box {
+        overflow: hidden;
+        p {
+          font-size: 12px;
+          line-height: 18px;
+          text-align: center;
+          will-change: transform;
+        }
+      }
+      .ic-down {
+        margin-top: 18px;
+        margin-inline: auto;
+        width: 16px;
+        height: 10px;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.sc-process {
+  svg {
+    fill: none;
+    stroke: #fff;
+  }
+}

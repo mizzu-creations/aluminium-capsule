@@ -118,22 +118,262 @@ html,
 body {
   width: 100%;
   height: 100%;
+  background: #0a1b37;
+  color: #fff;
+  font-family: "m";
   overscroll-behavior-y: contain;
-}
-
-html {
   cursor: default;
   -webkit-tap-highlight-color: transparent;
-  background: #0a1b37;
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
-}
-
-body {
-  font-family: "m";
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 
 svg {
   width: 100%;
   height: 100%;
+}
+
+#progress-bar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+}
+#progress-bar .progress {
+  width: 100%;
+  height: 10%;
+  background-color: #fff;
+}
+
+#header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+#header .nav-logo {
+  width: 47px;
+  height: 56px;
+  pointer-events: all;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+#header .nav-hamburger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  pointer-events: all;
+}
+#header .nav-hamburger svg {
+  width: 34px;
+  height: 34px;
+}
+#header .nav-contact {
+  pointer-events: all;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+#gnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 88.57143vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 60px;
+  margin-inline: auto;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.pagination-area {
+  display: none;
+  position: absolute;
+  bottom: 80px;
+  left: calc(5.71429vw - 4px);
+  height: 18px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.06em;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: translateY(100%) rotate(-90deg);
+          transform: translateY(100%) rotate(-90deg);
+  overflow: hidden;
+}
+.pagination-area .page-list .page-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.pagination-area .page-list .page-item .page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+}
+.pagination-area .page-list .page-item .page span:nth-child(2) {
+  opacity: 0.4;
+}
+.pagination-area .page-list .page-item .page .total {
+  opacity: 0.4;
+}
+
+.sc-intro {
+  height: 300vh;
+}
+.sc-intro .bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+.sc-intro .bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sc-intro .intro-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+.sc-intro .intro-wrap > div:not(.scroll-down) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.sc-intro .intro-wrap > div:not(.scroll-down) .capsule-box {
+  width: 9.28571vw;
+}
+.sc-intro .intro-wrap > div:not(.scroll-down) .capsule-box img {
+  aspect-ratio: auto 356/354;
+  will-change: opacity, transform;
+}
+.sc-intro .intro-wrap > div:not(.scroll-down) .title-box .title {
+  font-size: 12.5vw;
+  line-height: 11.90476vw;
+  font-family: "e";
+  font-weight: 300;
+  -webkit-perspective: 250px;
+          perspective: 250px;
+}
+.sc-intro .intro-wrap .scroll-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 64px;
+  width: 100%;
+}
+.sc-intro .intro-wrap .scroll-down .text-box {
+  overflow: hidden;
+}
+.sc-intro .intro-wrap .scroll-down .text-box p {
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  will-change: transform;
+}
+.sc-intro .intro-wrap .scroll-down .ic-down {
+  margin-top: 18px;
+  margin-inline: auto;
+  width: 16px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.sc-process svg {
+  fill: none;
+  stroke: #fff;
+}
+
+#intro-load {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+#intro-load .count-box {
+  overflow: hidden;
+}
+#intro-load .count-box .count {
+  font-family: "e";
+  font-size: 40px;
+  line-height: 38px;
+  font-weight: 300;
+  color: #fff;
+  will-change: transform;
+}
+#intro-load .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #091933;
 }/*# sourceMappingURL=style.css.map */

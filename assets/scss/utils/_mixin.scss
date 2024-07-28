@@ -21,3 +21,10 @@ $desktop: 1200px; //1024
     @content;
   }
 }
+
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

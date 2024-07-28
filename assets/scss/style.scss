@@ -5,7 +5,10 @@
 @import "./base/reset";
 @import "./base/preset";
 
+@import "./components/left-progress";
+
 @import "./layout/header";
 @import "./layout/footer";
 
 @import "./page/main";
+@import "./page/intro-load";
